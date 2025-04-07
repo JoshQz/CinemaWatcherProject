@@ -1,0 +1,42 @@
+# Visual Studio
+.vs/
+.vscode/
+*.suo
+*userosscache
+*.sln.docstates
+
+# Build
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Otros
+*.log
+*.tlog
+*.ide
+*.dbmdl
+
+# Archivos de configuracion
+*.env
+appsettings.json
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+
+# IIS
+.publish/
+*.Publish.xml
