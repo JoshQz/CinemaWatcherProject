@@ -27,6 +27,8 @@ artifacts/
 # Archivos de configuracion
 *.env
 appsettings.json
+appsettings.Development.json
+
 
 # Sistema operativo
 .DS_Store
