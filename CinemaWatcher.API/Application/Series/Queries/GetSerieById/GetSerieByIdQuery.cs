@@ -4,16 +4,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CinemaWatcher.API.Application.Series.Queries.GetSerieById
 {
-    public record GetSerieByIdQuery(int Id) : IRequest<Entities.EntitiesModels.Series>;
+    public record GetSerieByIdQuery(int Id) : IRequest<Domain.EntitiesModels.Series>;
 
-    public class GetSerieByIdQueryHandler : IRequestHandler<GetSerieByIdQuery, Entities.EntitiesModels.Series>
+    public class GetSerieByIdQueryHandler : IRequestHandler<GetSerieByIdQuery, Domain.EntitiesModels.Series>
     {
-        private readonly Entities.DataAccess.MyAppDbContext _context;
-        public GetSerieByIdQueryHandler(Entities.DataAccess.MyAppDbContext context)
+        private readonly Domain.DataAccess.MyAppDbContext _context;
+        public GetSerieByIdQueryHandler(Domain.DataAccess.MyAppDbContext context)
         {
             _context = context;
         }
-        public async Task<Entities.EntitiesModels.Series> Handle(GetSerieByIdQuery request, CancellationToken cancellationToken)
+        public async Task<Domain.EntitiesModels.Series> Handle(GetSerieByIdQuery request, CancellationToken cancellationToken)
         {
             var serie = await _context.Series
                 .FirstOrDefaultAsync(x => x.SerieId == request.Id, cancellationToken)

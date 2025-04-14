@@ -1,4 +1,4 @@
-using CinemaWatcher.Entities.DataAccess;
+using CinemaWatcher.Domain.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

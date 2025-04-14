@@ -2,8 +2,8 @@
 using CinemaWatcher.API.Application.Movies.Commands.UpdateMovie;
 using CinemaWatcher.API.Application.Movies.Queries.GetMovieById;
 using CinemaWatcher.API.Application.Movies.Queries.GetMovies;
-using CinemaWatcher.Entities.DataAccess;
-using CinemaWatcher.Entities.EntitiesModels;
+using CinemaWatcher.Domain.DataAccess;
+using CinemaWatcher.Domain.EntitiesModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,4 +1,4 @@
-﻿using CinemaWatcher.Entities.DataAccess;
+﻿using CinemaWatcher.Domain.DataAccess;
 using MediatR;
 
 namespace CinemaWatcher.API.Application.Series.Commands.CreateNewSerie
@@ -9,18 +9,18 @@ namespace CinemaWatcher.API.Application.Series.Commands.CreateNewSerie
         string Category,
         string Duration,
         DateTime DateOfPublish
-        ) : IRequest<Entities.EntitiesModels.Series>;
+        ) : IRequest<Domain.EntitiesModels.Series>;
 
-    public class CreateNewSerieCommandHandler : IRequestHandler<CreateNewSerieCommand, Entities.EntitiesModels.Series>
+    public class CreateNewSerieCommandHandler : IRequestHandler<CreateNewSerieCommand, Domain.EntitiesModels.Series>
     {
         private readonly MyAppDbContext _context;
         public CreateNewSerieCommandHandler(MyAppDbContext context)
         {
             _context = context;
         }
-        public async Task<Entities.EntitiesModels.Series> Handle(CreateNewSerieCommand request, CancellationToken cancellationToken)
+        public async Task<Domain.EntitiesModels.Series> Handle(CreateNewSerieCommand request, CancellationToken cancellationToken)
         {
-            Entities.EntitiesModels.Series newSerie = new()
+            Domain.EntitiesModels.Series newSerie = new()
             {
                 Title = request.Title,
                 Category = request.Category,

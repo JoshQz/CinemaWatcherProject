@@ -1,4 +1,4 @@
-﻿using CinemaWatcher.Entities.DataAccess;
+﻿using CinemaWatcher.Domain.DataAccess;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,18 +9,18 @@ namespace CinemaWatcher.API.Application.Movies.Commands.UpdateMovie
         string Title,
         string Category,
         string Duration,
-        DateTime DateOfPublish) : IRequest<Entities.EntitiesModels.Movies>;
+        DateTime DateOfPublish) : IRequest<Domain.EntitiesModels.Movies>;
 
-    public class UpdateMovieCommandHandler : IRequestHandler<UpdateMovieCommand, Entities.EntitiesModels.Movies>
+    public class UpdateMovieCommandHandler : IRequestHandler<UpdateMovieCommand, Domain.EntitiesModels.Movies>
     {
         private readonly MyAppDbContext _context;
         public UpdateMovieCommandHandler(MyAppDbContext context)
         {
             _context = context;
         }
-        public async Task<Entities.EntitiesModels.Movies> Handle(UpdateMovieCommand request, CancellationToken cancellationToken)
+        public async Task<Domain.EntitiesModels.Movies> Handle(UpdateMovieCommand request, CancellationToken cancellationToken)
         {
-            Entities.EntitiesModels.Movies movie = await _context.Movies
+            Domain.EntitiesModels.Movies movie = await _context.Movies
                 .FirstOrDefaultAsync(x => x.MovieId == request.MovieId, cancellationToken)
                 ?? throw new Exception("Movie not found");
 

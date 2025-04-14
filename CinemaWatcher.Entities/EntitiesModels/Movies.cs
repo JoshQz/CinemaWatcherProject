@@ -1,4 +1,4 @@
-﻿namespace CinemaWatcher.Entities.EntitiesModels
+﻿namespace CinemaWatcher.Domain.EntitiesModels
 {
     public class Movies
     {

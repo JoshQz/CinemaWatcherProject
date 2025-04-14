@@ -1,4 +1,4 @@
-﻿using CinemaWatcher.Entities.DataAccess;
+﻿using CinemaWatcher.Domain.DataAccess;
 using MediatR;
 
 namespace CinemaWatcher.API.Application.Movies.Commands.CreateMovie
@@ -8,9 +8,9 @@ namespace CinemaWatcher.API.Application.Movies.Commands.CreateMovie
         string Category,
         string Duration,
         DateTime DateOfPublish) :
-        IRequest<Entities.EntitiesModels.Movies>;
+        IRequest<Domain.EntitiesModels.Movies>;
 
-    public class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, Entities.EntitiesModels.Movies>
+    public class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, Domain.EntitiesModels.Movies>
     {
         private readonly MyAppDbContext _context;
 
@@ -19,9 +19,9 @@ namespace CinemaWatcher.API.Application.Movies.Commands.CreateMovie
             _context = context;
         }
 
-        public async Task<Entities.EntitiesModels.Movies> Handle(CreateMovieCommand request, CancellationToken cancellationToken)
+        public async Task<Domain.EntitiesModels.Movies> Handle(CreateMovieCommand request, CancellationToken cancellationToken)
         {
-            Entities.EntitiesModels.Movies newMovie = new()
+            Domain.EntitiesModels.Movies newMovie = new()
             {
                 Title = request.Title,
                 Category = request.Category,

@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CinemaWatcher.Entities\CinemaWatcher.Entities.csproj" />
+    <ProjectReference Include="..\CinemaWatcher.Entities\CinemaWatcher.Domain.csproj" />
   </ItemGroup>
 
 </Project>

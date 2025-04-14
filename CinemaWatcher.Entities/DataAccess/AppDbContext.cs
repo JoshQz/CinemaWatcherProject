@@ -1,7 +1,7 @@
-﻿using CinemaWatcher.Entities.EntitiesModels;
+﻿using CinemaWatcher.Domain.EntitiesModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace CinemaWatcher.Entities.DataAccess
+namespace CinemaWatcher.Domain.DataAccess
 {
     public class MyAppDbContext : DbContext
     {

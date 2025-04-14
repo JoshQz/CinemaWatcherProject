@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CinemaWatcher.Entities.Migrations
+namespace CinemaWatcher.Domain.Migrations
 {
     /// <inheritdoc />
     public partial class FirstMigrationDBCreation : Migration

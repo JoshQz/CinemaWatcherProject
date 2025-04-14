@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CinemaWatcher.Entities.EntitiesModels
+namespace CinemaWatcher.Domain.EntitiesModels
 {
     public class Series
     {

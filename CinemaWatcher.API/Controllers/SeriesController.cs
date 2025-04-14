@@ -2,7 +2,7 @@
 using CinemaWatcher.API.Application.Series.Commands.UpdateSerie;
 using CinemaWatcher.API.Application.Series.Queries.GetSerieById;
 using CinemaWatcher.API.Application.Series.Queries.GetSeries;
-using CinemaWatcher.Entities.EntitiesModels;
+using CinemaWatcher.Domain.EntitiesModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
